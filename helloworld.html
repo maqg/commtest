@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+
+    <script src="react/JSXTransformer.js"></script>
+    <script src="react/react.js"></script>
+    <script src="react/react-dom.js"></script>
+
+
+</head>
+<body>
+
+<div id="container">
+
+
+</div>
+
+<script type="text/jsx">
+
+
+    var Hello = React.createClass({
+        render: function() {
+            return <div>Hello {this.props.name}</div>;
+        }
+    });
+
+    ReactDOM.render(
+    <Hello name="World" />,
+            document.getElementById('container')
+    );
+
+    /*
+    var HelloApplication = React.createClass({
+
+        render: function () {
+            var message = 'React has been successfully running for about seconds.' + this.props.paras;
+            var jacky = this.props.jacky;
+
+            return <div>{this.props.paras}</div>;
+
+            //return React.DOM.h2(null, jacky);
+
+            //return React.DOM.p(null, message, jacky);
+        }
+    });
+
+    var HelloApplicationFactory = React.createFactory(HelloApplication);
+
+    ReactDOM.render(
+            HelloApplicationFactory({paras: "paraskkkk", jacky: "woo"}),
+            document.getElementById('container'));
+    */
+
+
+</script>
+
+</body>
+</html>
