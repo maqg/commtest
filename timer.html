@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>timer</title>
+
+    <script src="react/JSXTransformer.js"></script>
+    <script src="react/react.js"></script>
+    <script src="react/react-dom.js"></script>
+</head>
+<body>
+
+<div id="example">
+</div>
+
+<script type="text/jsx">
+    var HelloWorld = React.createClass({
+        render: function () {
+            return (
+                    <div>
+                        <p>
+                            Hello,<input type="text" placeholder={this.props.placeholder}/>!
+                        </p>
+                        <p>
+                            It is {this.props.date.toTimeString()}
+                        </p>
+                    </div>
+            );
+        }
+    });
+
+    setInterval(function () {
+        ReactDOM.render(
+                <HelloWorld placeholder="Your Name Please" date={new Date()}/>,
+                document.getElementById('example')
+        );
+    }, 500);
+</script>
+
+</body>
+</html>
